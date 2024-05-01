@@ -1,0 +1,38 @@
+// Implementación de un Grafo (dirigido y no dirigido)
+import java.util.*;
+
+class Graph {
+    private int V;
+    private LinkedList<Integer>[] adjacencyList;
+
+    public Graph(int v) {
+        V = v;
+        adjacencyList = new LinkedList[V];
+        for (int i = 0; i < V; ++i)
+            adjacencyList[i] = new LinkedList();
+    }
+
+    // Métodos para agregar aristas al Grafo
+    public void addEdge(int v, int w) {
+        adjacencyList[v].add(w);
+    }
+
+    // Métodos para recorridos sobre el Grafo
+    public void DFS(int v) {
+        // Implementación de DFS aquí
+    }
+
+    public void BFS(int v) {
+        // Implementación de BFS aquí
+    }
+
+    // Algoritmo de Kruskal para encontrar el árbol de expansión mínima
+    public void kruskalMST() {
+        // Implementación de Kruskal aquí
+    }
+
+    // Algoritmo de Dijkstra para encontrar el camino más corto
+    public void dijkstra(int source) {
+        // Implementación de Dijkstra aquí
+    }
+}
