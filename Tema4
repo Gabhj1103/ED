@@ -1,0 +1,49 @@
+// Implementación del TDA para un Árbol
+class TreeNode {
+    int val;
+    TreeNode left, right;
+
+    public TreeNode(int val) {
+        this.val = val;
+        this.left = this.right = null;
+    }
+}
+
+class Tree {
+    TreeNode root;
+
+    public Tree() {
+        root = null;
+    }
+
+    // Métodos para recorridos en el Árbol
+    public void preOrder(TreeNode node) {
+        if (node != null) {
+            System.out.print(node.val + " ");
+            preOrder(node.left);
+            preOrder(node.right);
+        }
+    }
+
+    public void inOrder(TreeNode node) {
+        if (node != null) {
+            inOrder(node.left);
+            System.out.print(node.val + " ");
+            inOrder(node.right);
+        }
+    }
+
+    public void postOrder(TreeNode node) {
+        if (node != null) {
+            postOrder(node.left);
+            postOrder(node.right);
+            System.out.print(node.val + " ");
+        }
+    }
+
+    // Método para transformar expresión infija a postfija
+    public String infixToPostfix(String infixExpression) {
+        // Implementación del algoritmo aquí
+        return "";
+    }
+}
